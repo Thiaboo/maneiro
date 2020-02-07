@@ -68,7 +68,7 @@ import UIKit
             // Set the button images
             button.setImage(emptyStar, for: .normal)
             button.setImage(filledStar, for: .selected)
-            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
             
             // Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -108,8 +108,6 @@ import UIKit
             // Otherwise set the rating to the selected star
             rating = selectedRating
         }
-        
-        print(rating)
     }
 
     private func updateButtonSelectionStates() {
