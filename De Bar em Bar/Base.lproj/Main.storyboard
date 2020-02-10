@@ -157,7 +157,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1916" y="125.4872563718141"/>
+            <point key="canvasLocation" x="942" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H9j-qk-jab">
@@ -175,7 +175,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aee-4l-DAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783.20000000000005" y="126.38680659670166"/>
+            <point key="canvasLocation" x="-673" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2AZ-4P-w0G">
@@ -193,13 +193,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxC-tD-4Ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="510"/>
+            <point key="canvasLocation" x="156" y="905"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="920" height="559"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FUY-X9-w67"/>
+        <segue reference="Uuy-Z9-cUP"/>
     </inferredMetricsTieBreakers>
 </document>
