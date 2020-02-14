@@ -17,6 +17,8 @@ class BarTableViewController: UITableViewController {
     
     //MARK: Actions
     
+    //
+    
     @IBAction func unwindToMealList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? BarViewController, let bar = sourceViewController.bar {
             
@@ -38,16 +40,18 @@ class BarTableViewController: UITableViewController {
     
     //MARK: Private Methods
     
+    //Aqui foi feito a 3 criacao dos bares do comeco do app
+    
     private func loadSampleBares(){
         let photo1 = UIImage(named: "bar1")
         let photo2 = UIImage(named: "bar2")
         let photo3 = UIImage(named: "bar3")
         
-        guard let bar1 = Bar(name: "Barzinho da esquina", address: "Blumenau", phone: "3382 9038", photo: photo1, rating: 3, longitude: 0, latitude: 0) else {
+        guard let bar1 = Bar(name: "Andre Fumante", address: "Timbo", phone: "3382 9038", photo: photo1, rating: 3, longitude: 0, latitude: 0) else {
             fatalError("Unable to instantiate bar1")
         }
         
-        guard let bar2 = Bar(name: "Bar top", address: "Timbó", phone: "3382 9038", photo: photo2, rating: 4, longitude: 0, latitude: 0) else {
+        guard let bar2 = Bar(name: "TORA", address: "Balneario", phone: "3382 9038", photo: photo2, rating: 4, longitude: 0, latitude: 0) else {
             fatalError("Unable to instantiate bar2")
         }
         
@@ -58,6 +62,8 @@ class BarTableViewController: UITableViewController {
         bares += [bar1, bar2, bar3]
     }
     
+    
+    //Para Salvar o Bar
     private func saveBares() {
         let isSucessfulSave = NSKeyedArchiver.archiveRootObject(bares, toFile: Bar.ArchiveURL.path)
         
@@ -67,7 +73,7 @@ class BarTableViewController: UITableViewController {
             os_log("Tentativa de salvar bares falhou...", log: OSLog.default, type: .error)
         }
     }
-    
+    //Carregar o bar
     private func loadBares() -> [Bar]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Bar.ArchiveURL.path) as? [Bar]
     }
