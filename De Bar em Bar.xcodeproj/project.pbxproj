@@ -17,6 +17,7 @@
 		ABBDF58123E1A18F00904847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBDF58023E1A18F00904847 /* Assets.xcassets */; };
 		ABBDF58423E1A18F00904847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBDF58223E1A18F00904847 /* LaunchScreen.storyboard */; };
 		ABBDF58F23E1A18F00904847 /* De_Bar_em_BarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDF58E23E1A18F00904847 /* De_Bar_em_BarTests.swift */; };
+		ABD5106B23FC05A800B18614 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD5106A23FC05A800B18614 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		ABBDF58A23E1A18F00904847 /* De Bar em BarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "De Bar em BarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBDF58E23E1A18F00904847 /* De_Bar_em_BarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = De_Bar_em_BarTests.swift; sourceTree = "<group>"; };
 		ABBDF59023E1A18F00904847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD5106A23FC05A800B18614 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				AB9F786923E9A4B500DEB473 /* BarTableViewCell.swift */,
 				AB9EA45B23E9AE470035FE99 /* BarTableViewController.swift */,
 				ABBDF57D23E1A18D00904847 /* Main.storyboard */,
+				ABD5106A23FC05A800B18614 /* MapView.swift */,
 				ABBDF58223E1A18F00904847 /* LaunchScreen.storyboard */,
 				ABBDF58023E1A18F00904847 /* Assets.xcassets */,
 				ABBDF58523E1A18F00904847 /* Info.plist */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD5106B23FC05A800B18614 /* MapView.swift in Sources */,
 				AB9F786A23E9A4B500DEB473 /* BarTableViewCell.swift in Sources */,
 				AB9EA45C23E9AE470035FE99 /* BarTableViewController.swift in Sources */,
 				AB549AB923E44AFE006B39AE /* RatingBar.swift in Sources */,
