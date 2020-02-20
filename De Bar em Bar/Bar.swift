@@ -8,8 +8,11 @@
 
 import UIKit
 import os.log
+import MapKit
 
-class Bar: NSObject, NSCoding {
+class Bar: NSObject, NSCoding,MKAnnotation {
+    
+    
     
     //MARK: Properties
     
@@ -18,8 +21,14 @@ class Bar: NSObject, NSCoding {
     var phone: String
     var photo: UIImage?
     var rating: Int
-    var longitude: Double
-    var latitude: Double
+    var coordinate: CLLocationCoordinate2D
+    
+    var title: String? {
+        return name
+    }
+    var subtitle: String? {
+        return address
+    }
     
     //MARK: Archiving Paths
     
@@ -35,14 +44,13 @@ class Bar: NSObject, NSCoding {
         static let phone = "phone"
         static let photo = "photo"
         static let rating = "rating"
-        static let longitude = "longitute"
-        static let latitude = "latitude"
+        static let coordinate = "coordinate"
     }
     
     
     //MARK: Initialization
     
-    init?(name: String, address: String, phone: String, photo: UIImage?, rating: Int, longitude: Double, latitude: Double) {
+    init?(name: String, address: String, phone: String, photo: UIImage?, rating: Int, coordinate: CLLocationCoordinate2D) {
         
         // The fields must not be empty
         guard (!name.isEmpty) && (!address.isEmpty) && (!phone.isEmpty) else {
@@ -54,15 +62,7 @@ class Bar: NSObject, NSCoding {
             return nil
         }
         
-        // The longitude should range from -180 to 180 degrees
-        guard (longitude >= -180) && (longitude <= 180) else {
-            return nil
-        }
         
-        // The latitude should range from -90 to 90 degrees
-        guard (latitude >= -90) && (latitude <= 90) else {
-            return nil
-        }
         
         // Initialize stored properties.
         self.name = name
@@ -70,8 +70,9 @@ class Bar: NSObject, NSCoding {
         self.phone = phone
         self.photo = photo
         self.rating = rating
-        self.longitude = longitude
-        self.latitude = latitude
+        self.coordinate = coordinate
+        
+        
     }
     
     //MARK: NSCoding
@@ -82,8 +83,8 @@ class Bar: NSObject, NSCoding {
         aCoder.encode(phone, forKey: PropertyKey.phone)
         aCoder.encode(photo, forKey: PropertyKey.photo)
         aCoder.encode(rating, forKey: PropertyKey.rating)
-        aCoder.encode(latitude, forKey: PropertyKey.latitude)
-        aCoder.encode(longitude, forKey: PropertyKey.longitude)
+        aCoder.encode(coordinate, forKey: PropertyKey.coordinate)
+       
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -100,12 +101,16 @@ class Bar: NSObject, NSCoding {
         
         let rating = aDecoder.decodeInteger(forKey: PropertyKey.rating)
         
-        let longitude = aDecoder.decodeDouble(forKey: PropertyKey.longitude)
+        let coordinate = aDecoder.decodeObject(forKey: PropertyKey.coordinate) as? CLLocationCoordinate2D
         
-        let latitude = aDecoder.decodeDouble(forKey: PropertyKey.latitude)
         
-        self.init(name: name, address: address!, phone: phone!, photo: photo, rating: rating, longitude: longitude, latitude: latitude)
+        
+        self.init(name: name, address: address!, phone: phone!, photo: photo, rating: rating, coordinate: coordinate ?? CLLocationCoordinate2D(latitude: 0, longitude: 0))
+    }
+    
+ 
+    
     }
     
     
-}
+
