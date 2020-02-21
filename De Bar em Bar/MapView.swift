@@ -29,7 +29,7 @@ class MapViewController: UIViewController {
         }
         
         // set initial location in Honolulu
-        let initialLocation = CLLocation(latitude: 0, longitude: 0)
+        let initialLocation = CLLocation(latitude: -26.917541, longitude: -49.070702)
         centerMapOnLocation(location: initialLocation)
         
         for bar in bares{
@@ -52,15 +52,15 @@ class MapViewController: UIViewController {
         let photo2 = UIImage(named: "bar2")
         let photo3 = UIImage(named: "bar3")
         
-        guard let bar1 = Bar(name: "Andre Fumante", address: "Timbo", phone: "3382 9038", photo: photo1, rating: 3, coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)) else {
+        guard let bar1 = Bar(name: "Andre Fumante", address: "Timbo", phone: "3382 9038", photo: photo1, rating: 3, coordinate: CLLocationCoordinate2D(latitude: -26.917541, longitude: -49.070702)) else {
             fatalError("Unable to instantiate bar1")
         }
         
-        guard let bar2 = Bar(name: "TORA", address: "Balneario", phone: "3382 9038", photo: photo2, rating: 4,  coordinate: CLLocationCoordinate2D(latitude: 0.002, longitude: 0.002)) else {
+        guard let bar2 = Bar(name: "TORA", address: "Balneario", phone: "3382 9038", photo: photo2, rating: 4,  coordinate: CLLocationCoordinate2D(latitude: -26.915712, longitude: -49.071568)) else {
             fatalError("Unable to instantiate bar2")
         }
         
-        guard let bar3 = Bar(name: "TÁ CHOVENDO HAMBURGUER", address: "Londres", phone: "3382 9038", photo: photo3, rating: 1, coordinate: CLLocationCoordinate2D(latitude: 0.004, longitude: 0.004)) else {
+        guard let bar3 = Bar(name: "TÁ CHOVENDO HAMBURGUER", address: "Londres", phone: "3382 9038", photo: photo3, rating: 1, coordinate: CLLocationCoordinate2D(latitude: -26.917027, longitude: -49.072251)) else {
             fatalError("Unable to instantiate bar3")
         }
         

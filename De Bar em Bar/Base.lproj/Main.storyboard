@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ey-Ke-HGx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="io7-Oc-IDd">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -91,13 +91,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-TU-CCJ">
-                                <rect key="frame" x="64" y="257" width="78" height="30"/>
+                                <rect key="frame" x="64" y="373" width="78" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="ELx-MW-Db2">
-                                <rect key="frame" x="64" y="303" width="286" height="286"/>
+                                <rect key="frame" x="64" y="419" width="286" height="286"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -108,7 +108,7 @@
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ujX-ws-ULL" customClass="RatingBar" customModule="De_Bar_em_Bar" customModuleProvider="target">
-                                <rect key="frame" x="-391.5" y="621" width="1197" height="209"/>
+                                <rect key="frame" x="81" y="737" width="252" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ujX-ws-ULL" secondAttribute="height" multiplier="63:11" id="Fjr-2S-IDm"/>
                                 </constraints>
@@ -122,18 +122,18 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(00) 99999-9999" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-mv-f1F">
-                                <rect key="frame" x="158" y="257" width="192" height="30"/>
+                                <rect key="frame" x="158" y="373" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do bar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Z2-bm-sTo">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do bar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Z2-bm-sTo">
                                 <rect key="frame" x="16" y="120" width="382" height="43"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-74-aUO">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-74-aUO">
                                 <rect key="frame" x="24" y="195" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -198,10 +198,30 @@
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="124.58770614692655"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="wpf-np-aZr">
+            <objects>
+                <tabBarController id="io7-Oc-IDd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLA-VC-fp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0Ey-Ke-HGx" kind="relationship" relationship="viewControllers" id="RwD-5A-bAh"/>
+                        <segue destination="szy-fS-Gnq" kind="relationship" relationship="viewControllers" id="nL5-iQ-53K"/>
+                        <segue destination="GOF-kr-bFN" kind="relationship" relationship="viewControllers" id="cKP-GV-rs1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-cU-uk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1641" y="-233"/>
+        </scene>
+        <!--LISTA KRL-->
         <scene sceneID="H9j-qk-jab">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="szy-fS-Gnq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="LISTA KRL" id="MaL-vm-0hx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O8D-06-QjS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -216,10 +236,11 @@
             </objects>
             <point key="canvasLocation" x="-673" y="126"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--ADICIONAR ANDRE-->
         <scene sceneID="2AZ-4P-w0G">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOF-kr-bFN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ADICIONAR ANDRE" id="QFU-N6-Uxi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1SR-P8-EUi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -234,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="156" y="905"/>
         </scene>
-        <!--Map View Controller-->
+        <!--MAPA PORRA-->
         <scene sceneID="Fdx-Fd-zTE">
             <objects>
                 <viewController id="0Ey-Ke-HGx" customClass="MapViewController" customModule="De_Bar_em_Bar" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,6 +271,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="92Z-qI-2SK"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="MAPA PORRA" id="psa-Wv-Ihm"/>
                     <connections>
                         <outlet property="mapView" destination="Q1I-bi-zue" id="joc-Vq-6Mr"/>
                     </connections>
@@ -264,6 +286,7 @@
         <image name="selectImagePlaceholder" width="750" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FUY-X9-w67"/>
+        <segue reference="cKP-GV-rs1"/>
+        <segue reference="Uuy-Z9-cUP"/>
     </inferredMetricsTieBreakers>
 </document>
