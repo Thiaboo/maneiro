@@ -217,11 +217,11 @@
             </objects>
             <point key="canvasLocation" x="-1641" y="-233"/>
         </scene>
-        <!--LISTA KRL-->
+        <!--LISTA -->
         <scene sceneID="H9j-qk-jab">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="szy-fS-Gnq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LISTA KRL" id="MaL-vm-0hx"/>
+                    <tabBarItem key="tabBarItem" title="LISTA " id="MaL-vm-0hx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O8D-06-QjS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -236,11 +236,11 @@
             </objects>
             <point key="canvasLocation" x="-673" y="126"/>
         </scene>
-        <!--ADICIONAR ANDRE-->
+        <!--ADICIONAR-->
         <scene sceneID="2AZ-4P-w0G">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOF-kr-bFN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ADICIONAR ANDRE" id="QFU-N6-Uxi"/>
+                    <tabBarItem key="tabBarItem" title="ADICIONAR" id="QFU-N6-Uxi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1SR-P8-EUi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -255,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="156" y="905"/>
         </scene>
-        <!--MAPA PORRA-->
+        <!--MAPA-->
         <scene sceneID="Fdx-Fd-zTE">
             <objects>
                 <viewController id="0Ey-Ke-HGx" customClass="MapViewController" customModule="De_Bar_em_Bar" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,7 +271,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="92Z-qI-2SK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MAPA PORRA" id="psa-Wv-Ihm"/>
+                    <tabBarItem key="tabBarItem" title="MAPA" id="psa-Wv-Ihm"/>
                     <connections>
                         <outlet property="mapView" destination="Q1I-bi-zue" id="joc-Vq-6Mr"/>
                     </connections>
@@ -286,7 +286,7 @@
         <image name="selectImagePlaceholder" width="750" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cKP-GV-rs1"/>
-        <segue reference="Uuy-Z9-cUP"/>
+        <segue reference="Pgt-un-seH"/>
+        <segue reference="FUY-X9-w67"/>
     </inferredMetricsTieBreakers>
 </document>
